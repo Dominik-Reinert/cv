@@ -10,9 +10,22 @@ export function PersonalInfo(): JSX.Element {
         label: personal-info;
 
         color: ${style.colors.highlight};
+
+        flex: 12 0 0;
+
+        .top {
+          background-color: red;
+          padding: 16px;
+          height: calc(61.8% - 2 * 16px);
+        }
+
+        .bottom {
+          height: 38.2%;
+        }
       `}
     >
-      Hello, personal info!
+      <div className="top">top</div>
+      <div className="bottom">details</div>
     </div>
   );
 }

@@ -14,13 +14,16 @@ export function Card(props: CardProps): JSX.Element {
       css={css`
         label: card;
 
+        display: flex;
+        align-items: stretch;
+
         width: ${styleContext.sizes.width.content};
         min-height: 80%;
         margin: auto;
         background-color: ${styleContext.colors.cardBackground};
 
         border-radius: 20px;
-        padding: 16px;
+        overflow: hidden;
         box-shadow: 2px 5px 5px 2px ${styleContext.shades.boxShadow};
       `}
     >
