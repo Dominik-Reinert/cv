@@ -6,9 +6,11 @@ export interface StyleContext {
     selectedText: string;
     border: string;
     separation: string;
+    boxShadow: string;
   };
   colors: {
     background: string;
+    cardBackground: string;
     highlight: string;
   };
   sizes: {
@@ -17,10 +19,11 @@ export interface StyleContext {
       subHeadline: string;
       text: string;
     };
+    width: {
+      content: string;
+    };
   };
-  padding: {
-    navbar: string;
-  };
+  padding: {};
 }
 
 //https://www.schemecolor.com/blue-white-grey-and-black.php
@@ -30,10 +33,12 @@ export const defaultStyles: StyleContext = {
     text: "#303030",
     selectedText: "#1C1C1C",
     border: "#808080",
-    separation: "##808080",
+    separation: "#808080",
+    boxShadow: "#C0C0C0",
   },
   colors: {
-    background: "#F1F1F1",
+    background: "#F0F0F0",
+    cardBackground: "#FAFAFA",
     highlight: "#3466AA",
   },
   sizes: {
@@ -42,8 +47,11 @@ export const defaultStyles: StyleContext = {
       subHeadline: "24px",
       text: "16px",
     },
+    width: {
+      content: "80%",
+    },
   },
-  padding: { navbar: "32px 104px" },
+  padding: {},
 };
 
 export const styleContext = React.createContext(defaultStyles);

@@ -10,16 +10,19 @@ export function Navbar(): JSX.Element {
         label: navbar;
 
         display: flex;
-        padding: ${styleContext.padding.navbar};
+        width: ${styleContext.sizes.width.content};
+        margin: auto;
+        height: 56px;
 
         .name-wrapper {
-          flex: 12 0 0;
+          margin: auto;
+          flex: 12 6 200px;
           font-size: ${styleContext.sizes.font.subHeadline};
         }
 
         .link-wrapper {
           display: flex;
-          flex: 1 0 400px;
+          flex: 1 2 300px;
           font-size: ${styleContext.sizes.font.text};
         }
 
