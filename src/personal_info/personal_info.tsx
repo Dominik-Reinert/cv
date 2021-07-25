@@ -1,5 +1,6 @@
 /**@jsx jsx */
 import { css, jsx } from "@emotion/react";
+import Particles from "react-particles-js";
 import { useStyleContext } from "../style_context/use_style_context";
 
 export function PersonalInfo(): JSX.Element {
@@ -14,17 +15,40 @@ export function PersonalInfo(): JSX.Element {
         flex: 12 0 0;
 
         .top {
-          background-color: red;
-          padding: 16px;
           height: calc(61.8% - 2 * 16px);
         }
 
         .bottom {
           height: 38.2%;
         }
+
+        .background-wrapper {
+          height: 100%;
+        }
+
+        #tsparticles {
+          height: 100%;
+        }
       `}
     >
-      <div className="top">top</div>
+      <div className="top">
+        <div className="background-wrapper">
+          <Particles
+            height={"100%"}
+            params={{
+              particles: { move: { enable: true, speed: 0.3 } },
+              background: {
+                color: { value: style.colors.highlight },
+              },
+            }}
+          />
+        </div>
+        <div className="foreground-wrapper">
+          <span>Dominik Reinert</span>
+          <span>Frontend developer / Teamleader</span>
+          <div>Social media buttons</div>
+        </div>
+      </div>
       <div className="bottom">details</div>
     </div>
   );
