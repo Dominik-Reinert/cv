@@ -1,10 +1,12 @@
 /**@jsx jsx */
 import { css, jsx } from "@emotion/react";
+import { useTranslation } from "react-i18next";
 import Particles from "react-particles-js";
 import { useStyleContext } from "../style_context/use_style_context";
 
 export function PersonalInfo(): JSX.Element {
   const style = useStyleContext();
+  const { t } = useTranslation("personalInfo");
   return (
     <div
       css={css`
@@ -45,7 +47,7 @@ export function PersonalInfo(): JSX.Element {
         </div>
         <div className="foreground-wrapper">
           <span>Dominik Reinert</span>
-          <span>Frontend developer / Teamleader</span>
+          <span>{t("jobTitle")}</span>
           <div>Social media buttons</div>
         </div>
       </div>

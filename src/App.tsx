@@ -4,6 +4,7 @@ import "./App.css";
 import { Background } from "./background/background";
 import { Card } from "./card/card";
 import { ClearStyles } from "./clear_styles/clear_styles";
+import "./i18n";
 import { Navbar } from "./navbar/navbar";
 import { PersonalInfo } from "./personal_info/personal_info";
 import { Routes } from "./routes/routes";
