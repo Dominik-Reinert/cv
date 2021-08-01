@@ -7,6 +7,7 @@ import { ClearStyles } from "./clear_styles/clear_styles";
 import "./i18n";
 import { Navbar } from "./navbar/navbar";
 import { PersonalInfo } from "./personal_info/personal_info";
+import { Resume } from "./resume/resume";
 import { Routes } from "./routes/routes";
 import { defaultStyles, styleContext } from "./style_context/style_context";
 
@@ -19,6 +20,9 @@ function App() {
             <Navbar />
             <Card>
               <Switch>
+                <Route path={Routes.resume}>
+                  <Resume />
+                </Route>
                 <Route path={Routes.home}>
                   <PersonalInfo />
                 </Route>
