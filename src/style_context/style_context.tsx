@@ -44,11 +44,11 @@ export const defaultStyles: StyleContext = {
   sizes: {
     font: {
       headline: "40px",
-      subHeadline: "24px",
-      text: "16px",
+      subHeadline: "28px",
+      text: "20px",
     },
     width: {
-      content: "80%",
+      content: "70%",
     },
   },
   padding: {},
